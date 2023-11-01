@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;500;700&family=Nunito+Sans:opsz,wght@6..12,300;6..12,600;6..12,800&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,700;1,900&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: black;
+}
+
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+.fontLogo {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    padding: 1rem;
+    font-weight: 700;
+    color: #404040;
+}
+
+.root {
+    background-color: rgb(224, 224, 224);
+}
+
+@mixin container {
+    box-sizing: border-box;
+    padding-left: 8%;
+}
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}

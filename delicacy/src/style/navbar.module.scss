@@ -1,0 +1,20 @@
+@import './base.module.scss';
+
+.container {
+    ul {
+        display: flex;
+        margin-left: 58px;
+        margin-bottom: 20px;
+        li {
+            margin-right: 40px;
+            a {
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+}
+
+ul {
+    list-style-type: none;
+}

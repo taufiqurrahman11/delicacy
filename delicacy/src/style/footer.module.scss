@@ -1,0 +1,45 @@
+@import './base.module.scss';
+
+.recipies {
+    @include container;
+    color: #404040;
+}
+
+.container {
+    @include container;
+    margin-top: 50px;
+    
+    h2 {
+        display: block;
+        color: #404040;
+    }
+    
+    @include flex-row;
+    .item {
+        width: 150px;
+        height: 130px;
+        border: 2px solid white;
+        margin-right: 20px;
+        border-radius: 5px;
+        background-color: rgb(224, 224, 224);
+        // display: flex;
+        position: relative;
+        margin-bottom: 30px;
+
+        img {
+            width: 80px;
+            height: 80px;
+            position: relative;
+            top: -20%;
+            left: 20%;
+            border-radius: 50px
+        }
+
+        p {
+            @include center;
+            font-weight: bold;
+            font-size: 12px;
+        }
+    }
+}
+

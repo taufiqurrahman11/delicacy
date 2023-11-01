@@ -1,0 +1,88 @@
+@import './base.module.scss';
+
+.container {
+    @include container;
+    // margin-left: 30px;
+    
+    .containerAll {
+        // width: 1000px;
+        // border: 4px solid grey;
+        overflow-x: scroll;
+        scrollbar-width: none;
+        scrollbar-color: transparent transparent;
+        display: flex;
+        gap: 250px;
+
+        .containerItem {
+            display: inline-block;
+            width: 100%;
+            // height: 500px;
+            border: 8px solid white;
+            border-radius: 20px;
+            padding: 1rem;
+            position: relative;
+
+            h2 {
+                color: #404040;
+            }
+
+            p {
+                width: 70%;
+                color: #404040;
+                font-size: 14px;
+            }
+
+            .ingredients {
+                // border: 2px solid brown;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1px;
+
+                .icon {
+                    border: 2px solid red;
+                }
+
+                h2 {
+                    color: #969696;
+                }
+
+                .detail {
+                    h5 {
+                        font-size: 12px;
+                    }
+
+                    p {
+                        margin-top: -14px;
+                        font-size: 10px;
+                    }
+                }
+            }
+
+            .foot {
+                display: flex;
+                justify-content: space-around;
+
+                button {
+                    padding: 0.6rem 0.4rem;
+                    width: 180px;
+                    margin-top: 15px;
+                    text-decoration: none;
+                    border: 2px solid rgb(40, 141, 248);
+                    border-radius: 4px;
+                    color: rgb(40, 141, 248);
+                    background-color: rgb(224, 224, 224);
+                    cursor: pointer;
+                }
+            }
+        }
+
+        img {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top: 18%;
+            left: 70%;
+        }
+    }
+
+}
