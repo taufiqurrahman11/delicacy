@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 function Content() {
   const [meals, setMeals] = useState([]);
+  const [favoriteMeals, setFavoriteMeals] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -41,6 +42,14 @@ function Content() {
     navigate(`/detail/${mealId}`);
   };
 
+  const addToFavorites = (meal) => {
+    if (!favoriteMeals.some((favoriteMeal) => favoriteMeal.idMeal === meal.idMeal)) {
+      setFavoriteMeals([...favoriteMeals, meal]);
+
+      localStorage.setItem('favoriteMeals', JSON.stringify([...favoriteMeals, meal]));
+    }
+  }
+
   return (
     <div className={styleContent.container}>
       <div className={styleContent.containerAll}>
@@ -67,7 +76,7 @@ function Content() {
               </div>
               <div className={styleContent.foot}>
                 <button onClick={() => navigateToDetailPage(meal.idMeal)}>Detail</button>
-                <button>Add to Favorite</button>
+                <button onClick={() => addToFavorites(meal)}>Add to Favorite</button>
               </div>
             </div>
             <img src={meal.strMealThumb} alt={meal.strMeal} />

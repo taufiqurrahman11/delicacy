@@ -27,6 +27,9 @@ const Navbar = () => {
             <a href={`#${category.strCategory}`}>{category.strCategory}</a>
           </li>
         ))}
+        <li>
+          <a href="">Favorite</a>
+        </li>
       </ul>
     </nav>
   );
